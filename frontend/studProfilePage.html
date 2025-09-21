@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mentee Profile | CU MentorConnect</title>
+    <link rel="stylesheet" href="\css\menteestyle.css" />
+    <link rel="stylesheet" href="\css\studprofile.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 🔹 Sidebar (same as menteesPage.html) -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="\assets\navCUlogo.jpg" alt="CU Logo" class="nav-icon" />
+          <h2>CU MENTORCONNECT</h2>
+        </div>
+        <nav class="nav">
+          <a href="dashboardPage.html" class="nav-link">Home</a>
+          <a href="menteesPage.html" class="nav-link active">Mentees</a>
+          <a href="meetingPage.html" class="nav-link">Meetings</a>
+          <a href="#" class="nav-link">Settings</a>
+          <a href="loginPage.html" class="nav-link">Log Out</a>
+        </nav>
+      </aside>
+
+      <!-- 🔹 Main content -->
+      <main class="main-content">
+        <h1 style="color: #8d4c45" id="student-name">Mentee Profile</h1>
+
+        <div class="profile-header">
+          <img
+            id="profile-photo"
+            src="\assets\profileplaceholder.png"
+            alt="profile"
+          />
+          <div>
+            <div id="student-meta"></div>
+            <div id="student-role" class="muted">Mentee</div>
+          </div>
+        </div>
+
+        <section class="profile-sections">
+          <div class="left-section">
+            <h2>Progress</h2>
+            <canvas
+              id="progressChart"
+              height="120"
+              style="margin: 20px"
+            ></canvas>
+
+            <h2>Upcoming Meetings</h2>
+            <ul id="meetings-upcoming" class="meeting-list"></ul>
+
+            <h2>Past Meetings</h2>
+            <ul id="meetings-past" class="meeting-list"></ul>
+          </div>
+
+          <div class="right-section">
+            <h2>Extracurricular Activities</h2>
+            <ul id="extracurricular-list" style="margin: 20px"></ul>
+
+            <h2 style="margin-top: 35px; margin-bottom: 20px">Latest Marks</h2>
+            <table style="margin: 10px">
+              <thead>
+                <tr>
+                  <th>CIA1</th>
+                  <th>CIA2</th>
+                  <th>CIA3</th>
+                  <th>ESE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="marks-row">
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 style="margin-top: 30px; margin-bottom: 20px">Mentor Notes</h2>
+            <form id="note-form">
+              <textarea
+                id="mentor-note"
+                rows="4"
+                placeholder="Write notes for this student..."
+              ></textarea>
+              <button type="submit" class="btn">Save Note</button>
+            </form>
+            <div id="notes-list" class="notes-list"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>© 2025 CU MentorConnect. All rights reserved.</footer>
+    <script src="\js\studprofile.js"></script>
+  </body>
+</html>

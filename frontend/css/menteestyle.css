@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  background-color: #8d4c45;
+  color: white;
+  width: 220px;
+  padding: 20px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.logo h2 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #d4a4a2;
+  color: black;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.main-content h1 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+/* 🔹 Filters */
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filters select,
+.filters input[type="text"] {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 160px;
+}
+
+.filters select:focus,
+.filters input[type="text"]:focus {
+  outline: none;
+  border-color: #8d4c45;
+  box-shadow: 0 0 3px rgba(141, 76, 69, 0.6);
+}
+
+/* 🔹 Table styling */
+.table-container {
+  overflow-y: auto;
+  max-height: 65vh; /* keeps it scrollable */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+thead {
+  background-color: #f1f4f8;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 🔹 Progress bar cell */
+.bar {
+  background: linear-gradient(
+    to right,
+    #7f4e4b var(--progress),
+    #eee var(--progress)
+  );
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 100px;
+  color: white;
+  text-align: center;
+}
+
+/* 🔹 Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #742f2d;
+  color: white;
+  font-size: 14px;
+}
+/* Highlight selected mentee row */
+#menteesTable tr.selected-row {
+  background-color: #e6f0ff;
+}

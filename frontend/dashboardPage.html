@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CU MentorConnect Dashboard</title>
+    <link rel="stylesheet" href="\css\dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="\js\dashboard.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="layout">
+        <aside class="sidebar">
+          <div class="logo">
+            <img src="\assets\navCUlogo.jpg" alt="CU Logo" class="nav-icon" />
+            <span><h2>CU MENTORCONNECT</h2></span>
+          </div>
+          <nav class="nav">
+            <a href="dashboardPage.html" class="nav-link active">Home</a>
+            <a href="menteesPage.html" class="nav-link">Mentees</a>
+            <a href="meetingPage.html" class="nav-link">Meetings</a>
+            <a href="#" class="nav-link">Settings</a>
+            <a href="loginPage.html" class="nav-link">Log Out</a>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <h1 id="greeting-message">Welcome, Mentor</h1>
+
+          <section id="quick-stats">
+            <h2>Quick Stats</h2>
+            <p>Total Mentees: <span id="totalMentees">0</span></p>
+
+            <div class="chart-section">
+              <h3>Students per Department</h3>
+              <canvas id="deptChart" height="150"></canvas>
+            </div>
+
+            <div class="chart-section">
+              <h3>Students per Year</h3>
+              <canvas id="yearChart" height="150"></canvas>
+            </div>
+
+            <p>Overall Academic Progress</p>
+            <div class="progress-bar">
+              <div id="progressBar" class="progress" style="width: 0%">0%</div>
+            </div>
+
+            <p>Overall Attendance</p>
+            <div class="progress-bar">
+              <div id="attendanceBar" class="progress" style="width: 0%">
+                0%
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>My Mentees</h2>
+            <table class="past-meetings">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Dept</th>
+                  <th>Semester</th>
+                </tr>
+              </thead>
+              <tbody id="menteesTable"></tbody>
+            </table>
+          </section>
+        </main>
+
+        <aside class="notifs">
+          <section>
+            <h2>Today’s Meetings</h2>
+            <ul id="todaysMeetings"></ul>
+          </section>
+          <section>
+            <h2>Notifications</h2>
+            <p>No new notifications</p>
+          </section>
+        </aside>
+      </div>
+
+      <footer>© 2025 CU MentorConnect. All rights reserved.</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Mentees | CU MentorConnect</title>
+    <link rel="stylesheet" href="\css\menteestyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="\assets\navCUlogo.jpg" alt="CU Logo" class="nav-icon" />
+          <h2>CU MENTORCONNECT</h2>
+        </div>
+        <nav class="nav">
+          <a href="dashboardPage.html" class="nav-link">Home</a>
+          <a href="menteePage.html" class="nav-link active">Mentees</a>
+          <a href="meetingPage.html" class="nav-link">Meetings</a>
+          <a href="#" class="nav-link">Settings</a>
+          <a href="loginPage.html" class="nav-link">Log Out</a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <h1 style="color: #8d4c45">My Mentees</h1>
+
+        <div class="filters">
+          <select id="filterDept">
+            <option value="">Filter by Department</option>
+            <option value="CSE">CSE</option>
+            <option value="CSE AIML">CSE AIML</option>
+            <option value="CSE DS">CSE DS</option>
+            <option value="ECE">ECE</option>
+            <option value="MECH">MECH</option>
+            <option value="CIVIL">CIVIL</option>
+          </select>
+
+          <select id="filterSem">
+            <option value="">Filter by Semester</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+
+          <select id="filterProgress">
+            <option value="">Filter by Progress</option>
+            <option value="low">< 50%</option>
+            <option value="mid">60-80%</option>
+            <option value="high">> 80%</option>
+          </select>
+
+          <input type="text" id="searchName" placeholder="Search by Name..." />
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Progress</th>
+              <th>Department</th>
+              <th>Semester</th>
+            </tr>
+          </thead>
+          <tbody id="menteesTable"></tbody>
+        </table>
+      </main>
+    </div>
+
+    <footer>© 2025 CU MentorConnect. All rights reserved.</footer>
+    <script src="\js\menteeView.js"></script>
+  </body>
+</html>

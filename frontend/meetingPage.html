@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CU MentorConnect - Meetings</title>
+    <link rel="stylesheet" href="\css\meetingstyle.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="\js\meetings.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="layout">
+        <aside class="sidebar">
+          <div class="logo">
+            <img src="\assets\navCUlogo.jpg" alt="CU Logo" class="nav-icon" />
+            <span><h2>CU MENTORCONNECT</h2></span>
+          </div>
+          <nav class="nav">
+            <a href="dashboardPage.html" class="nav-link">Home</a>
+            <a href="menteesPage.html" class="nav-link">Mentees</a>
+            <a href="meetingPage.html" class="nav-link active">Meetings</a>
+            <a href="#" class="nav-link">Settings</a>
+            <a href="loginPage.html" class="nav-link">Log Out</a>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <h1 style="color: #8d4c45">Meetings</h1>
+
+          <div class="calendar">
+            <div class="calendar-header">
+              <button id="prevMonth">&lt;</button>
+              <span id="monthYear"></span>
+              <button id="nextMonth">&gt;</button>
+            </div>
+            <table id="calendarTable"></table>
+          </div>
+
+          <button id="addMeetingBtn" class="schedule-btn">+ Add Meeting</button>
+
+          <div
+            class="search-box"
+            style="padding: 10px 0; text-align: right; margin-right: 20px"
+          >
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search by student name..."
+            />
+          </div>
+
+          <h2>Upcoming Meetings</h2>
+          <div class="upcoming-meetings">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Student</th>
+                  <th>Reason</th>
+                </tr>
+              </thead>
+              <tbody id="upcomingMeetingsBody"></tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+
+      <footer>© 2025 CU MentorConnect. All rights reserved.</footer>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Popup: Meetings for selected date -->
+    <div class="popup" id="dayPopup">
+      <h3>Meetings on <span id="popupDate"></span></h3>
+      <ul id="dayMeetingsList"></ul>
+      <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+
+    <!-- Popup: Add meeting -->
+    <div class="add-popup" id="addMeetingPopup">
+      <h3>Add Meeting</h3>
+      <form id="addMeetingForm">
+        <label>Student:</label>
+        <select id="studentSelect"></select
+        ><br /><br />
+        <label>Date:</label>
+        <input type="date" id="meetingDate" required /><br /><br />
+        <label>Time:</label>
+        <input type="time" id="meetingTime" required /><br /><br />
+        <label>Reason:</label>
+        <textarea id="meetingReason" required></textarea><br /><br />
+        <button type="submit" class="schedule-btn">Save</button>
+        <button type="button" class="close-btn" onclick="closeAddPopup()">
+          Cancel
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

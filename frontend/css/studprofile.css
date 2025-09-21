@@ -1,0 +1,86 @@
+/* mentee_profile.css */
+/* Reuse menteestyle.css for base theme */
+
+/* Profile header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  background-color: #a9716af3;
+  color:white;
+  font-weight: bold;
+  padding: 30px; 
+  border-radius: 20px;
+  font-size:x-large;
+  width: 500px;
+}
+.profile-header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Sections layout */
+.profile-sections {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.left-section {
+  flex: 2;
+  margin-bottom: 30px;
+}
+.right-section {
+  flex: 1;
+  margin-bottom: 100px;
+}
+
+/* Meetings list */
+.meeting-list {
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.meeting-list li {
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 12px;
+  margin-top:12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* Notes */
+#mentor-note {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 12px;
+  resize: vertical;
+}
+.btn {
+  margin-top: 10px;
+  background-color: #8d4c45;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #742f2d;
+}
+.notes-list {
+  margin-top: 15px;
+  padding:10px;
+}
+.note-item {
+  padding: 10px;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
